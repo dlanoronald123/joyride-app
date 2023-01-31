@@ -15,10 +15,8 @@ function Geolocation() {
 
   useEffect(()=> { 
     navigator.geolocation.getCurrentPosition((position)=>{
-      let lat = position.coords.latitude;
-      let lon = position.coords.longitude;
-      console.log(lat)
-      console.log(lon)
+      let lat = position.coords.latitude.toFixed(2);
+      let lon = position.coords.longitude.toFixed(2);
       setLatitude(lat)
       setLongtitude(lon)
     })
