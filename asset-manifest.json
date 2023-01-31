@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/joyride-app/static/css/main.84f9658c.css",
+    "main.js": "/joyride-app/static/js/main.ab9df41a.js",
+    "index.html": "/joyride-app/index.html",
+    "main.84f9658c.css.map": "/joyride-app/static/css/main.84f9658c.css.map",
+    "main.ab9df41a.js.map": "/joyride-app/static/js/main.ab9df41a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84f9658c.css",
+    "static/js/main.ab9df41a.js"
+  ]
+}
