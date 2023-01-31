@@ -15,8 +15,10 @@ function Geolocation() {
 
   useEffect(()=> { 
     navigator.geolocation.getCurrentPosition((position)=>{
-      let lat = position.coords.latitude.toFixed(2);
-      let lon = position.coords.longitude.toFixed(2);
+      let lat = position.coords.latitude;
+      let lon = position.coords.longitude;
+      console.log(lat)
+      console.log(lon)
       setLatitude(lat)
       setLongtitude(lon)
     })
@@ -24,6 +26,7 @@ function Geolocation() {
     let apiEndpoint = `${API_endpoint}lat=${latitude}&lon=${longtitude}&appid=${API_key}`
     axios.get(apiEndpoint)
     .then((res) => {
+      console.log(res.data)
       setResult(res.data)
     })
 	}, [latitude,longtitude])
@@ -31,7 +34,7 @@ function Geolocation() {
   return (
     <div className='geo-wrapper'>
       <h3 className='geo-loc'>Location: <span>{result.name}</span></h3>
-      <h3 className='geo-temp'>Temperature: <span>{result.main.temp}°F</span></h3>
+      <h3 className='geo-temp'>Temperature: <span>250°F</span></h3>
     </div>
   )
 }
